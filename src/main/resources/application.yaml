@@ -3,5 +3,3 @@ jdbc:
   url: jdbc:mysql://127.0.0.1:3306/leyou
   username: root
   password: 123
-server:
-  port: 8081
