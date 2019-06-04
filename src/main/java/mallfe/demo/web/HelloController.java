@@ -1,5 +1,6 @@
 package mallfe.demo.web;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Yangbin
  * @since 2019/06/04
  */
+@Slf4j
 @RestController
 public class HelloController {
 //    @Autowired
@@ -16,6 +18,7 @@ public class HelloController {
 
     @GetMapping
     public String hello(){
+        log.debug("hellp method is running");
         return "hellp, spring boot!";
     }
 }
