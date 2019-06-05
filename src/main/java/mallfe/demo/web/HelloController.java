@@ -25,7 +25,7 @@ public class HelloController {
     @Autowired
     UserService userService;
 
-    @GetMapping("{id}")
+    @GetMapping(value = "{id}" ,produces = "application/json;charset=utf-8")
     public User hello(@PathVariable("id") Long id){
         return userService.queryById(id);
     }
