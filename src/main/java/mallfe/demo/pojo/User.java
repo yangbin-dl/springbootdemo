@@ -1,20 +1,27 @@
 package mallfe.demo.pojo;
 
 import lombok.Data;
+import tk.mybatis.mapper.annotation.KeySql;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.util.Date;
 
 @Data
-public class user {
+@Table(name = "tb_user")
+public class User {
 
     // id
+    @Id
+    @KeySql(useGeneratedKeys = true)
     private Long id;
 
     // 用户名
     private String userName;
 
     // 密码
-    private String passWord;
+    private String password;
 
     //姓名
     private String name;
@@ -35,8 +42,6 @@ public class user {
     private Date updated;
 
     //备注
+    @Transient
     private String note;
-
-    public user() {
-    }
 }
