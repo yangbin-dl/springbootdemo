@@ -15,7 +15,7 @@ public class UserMapperTest {
 
     @Test
     public void testQuery(){
-        User user = userMapper.selectByPrimaryKey(1L);
+        User user = userMapper.selectByPrimaryKey(2L);
         System.out.println("user = " + user);
     }
 }
